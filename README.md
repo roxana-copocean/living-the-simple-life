@@ -3,7 +3,7 @@
 
 ***Home***
 
-![Homepage](/img/github/home.png)
+![Homepage](/img/github/home-page.png)
 
 ***Recent Posts***
 
