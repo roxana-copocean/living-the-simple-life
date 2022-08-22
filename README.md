@@ -5,6 +5,6 @@
 
 ![Homepage](/img/github/home.png)
 
-***About Me***
+***Recent Posts***
 
-![AboutMe](/img/github/about-me.png)
+![RecentPosts](/img/github/recent-posts.png)
