@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+/* colors */
+:root {
+	--blue: #143773;
+	--light-blue: #1792d2;
+	--light-gray: #707070;
+	--very-light-gray: #f8f8f8;
+}
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.125rem;
+	color: var(--light-gray);
+	margin: 0;
+	font-weight: 300;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* layout */
+
+header {
+	background-color: var(--very-light-gray);
+	padding: 2em 0;
+	text-align: center;
+	margin-bottom: 3em;
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 900px;
+}
+
+.container-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+	font-family: 'Lora', serif;
+	font-weight: 400;
+	color: var(--blue);
+	margin-top: 0;
+}
+
+h1 {
+	margin: 0;
+	font-size: 2rem;
+}
+
+span {
+	font-weight: 700;
+}
+
+a {
+	color: var(--light-blue);
+}
+
+a:hover,
+a:focus {
+	color: var(--blue);
+}
+
+/* the logo subtitle */
+.subtitle {
+	color: var(--light-blue);
+	text-transform: uppercase;
+	margin: 0;
+	margin-top: .4em;
+	font-weight: 700;
+	font-size: .75rem;
+}
+
+.article-title {
+	font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+	font-size: .875rem;
+}
+
+.article-read-more {
+	color: var(--light-blue);
+	text-decoration: none;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+	color: var(--blue);
+	text-decoration: underline;
+}
+
+.article-info {
+	margin: 1.5em 0;
+}
+/* Navigation */
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+}
+
+nav li {
+	margin-left: 2em;
+}
+
+nav a {
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: inherit;
+	padding: .25rem 0;
+}
+
+nav a:hover,
+nav a:focus {
+	color: var(--light-blue);
+}
+
+.current-page {
+	border-bottom: 2px solid var(--light-gray);
+}
+
+.current-page:hover {
+	color: var(--light-gray);
+}
+
+@media (max-width: 670px) {
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav li {
+		margin: .5em 0em;
+	}
+}
+
+/* @media (min-width: 675px) {
+	.container-flex {
+		flex-direction: row;
+	}
+
+	main {
+		width: 75%;
+	}
+
+	aside {
+		width: 20%;
+	}
+} */
+
+/* articles */
+
+.article-featured {
+	border-bottom: 1px solid var(--light-gray);
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+}
+
+.article-recent {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+
+/* changing the order  */
+.article-recent-main {
+	order: 2;
+}
+
+.article-recent-secondary {
+	order: 1;
+}
+
+@media (min-width: 675px) {
+	header {
+		text-align: left;
+	}
+	.container-flex {
+		flex-direction: row;
+	}
+
+	main {
+		width: 70%;
+	}
+
+	aside {
+		width: 25%;
+		min-width: 200px;
+		margin-left: 1em;
+	}
+
+	.article-recent {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.article-recent-main {
+		width: 68%;
+	}
+
+	.article-recent-secondary {
+		width: 30%;
+	}
+
+	.article-featured {
+		display: flex;
+		flex-direction: column;
+	}
+	.article-image {
+		margin-bottom: 1em;
+		order: -2;
+	}
+
+	.article-info {
+		order: -1;
+	}
+
+	.article-image {
+		min-height: 250px;
+		width: 100%;
+		object-fit: cover;
+		/* object-position: left; */
+	}
+}
+
+/* widgets */
+
+.sidebar-widget {
+	border: 20px solid var(--very-light-gray);
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+.widget-title {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin-bottom: .3em;
+}
+
+.widget-recent-post {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid var(--light-gray);
+	margin-bottom: 1em;
+}
+.widget-recent-post-title {
+	margin-top: 1em;
+	font-size: 1rem;
+	order: 8;
+	font-weight: 700;
+}
+
+.widget-recent-post:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.widget-image {
+	order: 0;
+	margin-bottom: 0;
+}
+
+/* footer */
+
+footer {
+	background: var(--blue);
+	color: white;
+	text-align: center;
+	padding: 3em 0;
+	margin-top: 2em;
+}
+
+/* about-me */
+.image-full {
+	max-height: 300px;
+	width: 100%;
+	object-fit: cover;
+	margin-bottom: 2em;
+}
+
+.about-me_title {
+	color: var(--light-blue);
+	margin-bottom: 0;
+	margin-top: 1em;
+}
